@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+         
+        body {
+             background-color: black;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f39c12;
+        }
+
+      
+
+        /* Gallery Styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .gallery-item {
+            text-align: center;
+            margin: 15px;
+            width: 220px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect for images */
+        .gallery-item img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f39c12;
+            transition: color 0.3s ease;
+        }
+
+        .gallery-item:hover p {
+            color: #ecf0f1;
+        }
+
+        .gallery-item .facts {
+            font-size: 14px;
+            color: #ddd;
+            text-align: justify;
+            margin-top: 10px;
+        }
+
+        /* Button Hover Effects */
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        /* Gradient Overlay on Images */
+        .gallery-item img {
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+ 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="planets.html">Planets</a>
+    <a href="#">Astronauts</a>
+</nav>
+
+ 
+<h1>Famous Astronauts in Space History</h1>
+
+ 
+<div class="parallax"></div>
+
+ 
+<div class="gallery">
+    <!-- Yuri Gagarin -->
+    <div class="gallery-item">
+        <img src="yuri.jpg" alt="Yuri Gagarin">
+        <div class="overlay"></div>
+        <p>Yuri Gagarin</p>
+        <div class="facts">
+            <p>Yuri Gagarin, the first human to journey into space, is a Soviet hero who orbited Earth on April 12, 1961.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Year:</b> 1961</li>
+                <li><b>Spacecraft:</b> Vostok 1</li>
+                <li><b>Mission Duration:</b> 108 minutes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Neil Armstrong -->
+    <div class="gallery-item">
+        <img src="neil.jpg" alt="Neil Armstrong">
+        <div class="overlay"></div>
+        <p>Neil Armstrong</p>
+        <div class="facts">
+            <p>Neil Armstrong made history as the first person to walk on the Moon during the Apollo 11 mission in 1969.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Year:</b> 1969</li>
+                <li><b>Spacecraft:</b> Apollo 11</li>
+                <li><b>Mission Duration:</b> 8 days, 14 hours, 12 minutes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Rakesh Sharma -->
+    <div class="gallery-item">
+        <img src="rakesh.jpg" alt="Rakesh Sharma">
+        <div class="overlay"></div>
+        <p>Rakesh Sharma</p>
+        <div class="facts">
+            <p>India's first astronaut, Rakesh Sharma flew aboard the Soviet spacecraft Soyuz T-11 in 1984.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Year:</b> 1984</li>
+                <li><b>Spacecraft:</b> Soyuz T-11</li>
+                <li><b>Mission Duration:</b> 7 days, 21 hours, 40 minutes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kalpana Chawla -->
+    <div class="gallery-item">
+        <img src="kalpana.jpg" alt="Kalpana Chawla">
+        <div class="overlay"></div>
+        <p>Kalpana Chawla</p>
+        <div class="facts">
+            <p>Kalpana Chawla was the first woman of Indian origin in space, known for her two Space Shuttle missions.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Years:</b> 1997, 2003</li>
+                <li><b>Spacecraft:</b> Space Shuttle Columbia</li>
+                <li><b>Mission Duration:</b> 31 days, 14 hours, 54 minutes (total for both missions)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sunita Williams -->
+    <div class="gallery-item">
+        <img src="sunita.jpg" alt="Sunita Williams">
+        <div class="overlay"></div>
+        <p>Sunita Williams</p>
+        <div class="facts">
+            <p>Sunita Williams holds the record for the most spacewalks by a woman, having spent 322 days in space.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Years:</b> 2006, 2007-2008</li>
+                <li><b>Spacecraft:</b> Space Shuttle Discovery, ISS</li>
+                <li><b>Mission Duration:</b> 322 days, 17 hours, 40 minutes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sally Ride -->
+    <div class="gallery-item">
+        <img src="sally.jpg" alt="Sally Ride">
+        <div class="overlay"></div>
+        <p>Sally Ride</p>
+        <div class="facts">
+            <p>Sally Ride was the first American woman in space, flying aboard STS-7 in 1983 on the Space Shuttle Challenger.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Year:</b> 1983</li>
+                <li><b>Spacecraft:</b> Space Shuttle Challenger</li>
+                <li><b>Mission Duration:</b> 6 days, 2 hours, 23 minutes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- John Glenn -->
+    <div class="gallery-item">
+        <img src="john.jpg" alt="John Glenn">
+        <div class="overlay"></div>
+        <p>John Glenn</p>
+        <div class="facts">
+            <p>John Glenn became the first American to orbit the Earth and later returned to space aboard the Space Shuttle Discovery at age 77.</p>
+            <div><b>Mission Details:</b></div>
+            <ul>
+                <li><b>Year:</b> 1962, 1998</li>
+                <li><b>Spacecraft:</b> Friendship 7, Space Shuttle Discovery</li>
+                <li><b>Mission Duration:</b> 4 hours, 55 minutes (STS-95 flight)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+
+</body>
+</html>
